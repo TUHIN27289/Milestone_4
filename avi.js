@@ -90,3 +90,76 @@ const numbers____ = [
 console.log('\n\n\n using function ')
 numbers____.reverse();
 console.log(numbers____);
+
+// 18_4: Sort Array in Ascending & Descending Order (Manual & sort() method)
+
+const friends = [
+  "Alice",
+  "Avi",
+  "toulir",
+  "Zara",
+  "Bob",
+  "Charlie",
+  "David",
+  "Eve",
+  "Frank",
+  "Grace",
+  "Hannah",
+  "Ivy",
+  "Jack",
+  'Kathy',
+  "Liam",
+  "Mia",
+  "Noah",
+  "Olivia",
+  "Paul",
+  "Quinn",
+  "Riley",
+  "Sophia",   
+  "avi",
+  "Zara",
+  "Zoe",
+  "Zane",
+  "Zara",
+  "Zara",
+  "AVI",
+  "avi",
+  "1229"
+];
+console.log(friends);
+friends.sort();
+console.log("\n\nSorted in Ascending Order:");
+console.log(friends);
+
+// Sorting in Descending Order 
+console.log("\n\n~ ~ Sorting in Descending Order ~ ~ \n");
+friends.sort((a,b)=> b.localeCompare(a));
+console.log(friends);
+
+const favNumbers = [5, 3, 8, 1, 4, 2, 7, 6];
+console.log("\n\nOriginal Array:");
+console.log(favNumbers);
+favNumbers.sort();
+console.log("\n\nSorted in Ascending Order:");  
+console.log(favNumbers);
+
+//
+const aviFavNumbers = [5, 3, 8, 1, 4, 2, 7, 6, 111, 222, 333, 444, 555, 666, 777, 888, 999,768];
+console.log("\n\nOriginal Array:");
+console.log(aviFavNumbers);
+// Sorting in Ascending Order using sort() method
+aviFavNumbers.sort((a, b) => a - b);
+console.log("\n\nSorted in Ascending Order:");
+console.log(aviFavNumbers);
+
+
+
+
+//SORTING IN DESCENDING ORDER
+console.log("\n\n~ ~ Sorting in Descending Order ~ ~ \n");
+// Sorting in Descending Order using manual method
+aviFavNumbers.sort((a, b) => b - a);
+console.log("\n\nSorted in Descending Order:");
+console.log(aviFavNumbers);
+
+// Sorting in Descending Order using sort() method
