@@ -162,4 +162,47 @@ aviFavNumbers.sort((a, b) => b - a);
 console.log("\n\nSorted in Descending Order:");
 console.log(aviFavNumbers);
 
-// Sorting in Descending Order using sort() method
+
+
+
+
+
+
+//18_5: Array of Objects and Access Object inside an Array
+ const employee=[
+  {name:'Avi ', profession:'web dev', age:'24', gender:'female', salary:'50000000'},
+  {name:'Toukir', profession:'ciso', age:'26', gender:'male', salary:'2100000'},
+  {name:'Shohag', profession:'MBBS', age:'32', gender:'male', salary:'9000000000000'},
+  {name:'Afsana', profession:'MBBS', age:'30', gender:'female', salary:'80000000000'},
+  {name:'Salma', profession:'UX-Designer', age:'26', gender:'female', salary:'70000000000'},
+ ]
+
+ console.log(employee)// full array of object
+ console.log(employee[0])// first object of array
+
+ // using for loop array of object print.
+ for( const em of employee){
+  console.log(em);
+ }
+
+// using for loop access specific array of object element
+console.log(employee[0].name+employee[1].name)
+//using loop
+for (const e of employee){
+  console.log(e.name+' '+e.gender+' '+e.salary)
+}
+
+// can also change the value of 
+employee[0].name='Avi 1229 avi';
+for (const e of employee){
+  console.log(e.name+' '+e.gender+' '+e.salary)
+}
+
+// also can store array of object data in a variable
+for(const v of employee){
+  const emp=v;
+  const empInfo=emp.name+' '+emp.profession+' '+emp.salary;
+  console.log(empInfo);
+}
+
+
