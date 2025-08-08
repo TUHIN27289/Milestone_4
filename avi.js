@@ -206,3 +206,46 @@ for(const v of employee){
 }
 
 
+//18_6: [Optional] traverse in a 2D array
+
+//creating array of object
+const examMarks=[
+  [1,2,3,4,90],
+  [5,6,7,8,111],
+  [9,10,11,12,999],
+  [13,14,15,16,200]
+]
+//printing full array of object or 2D array
+console.log(examMarks)
+//printing  specific array of a object or 2D array
+console.log(examMarks[2]); //printing 3rd array
+console.log(examMarks[1]); //printing 2nd array
+console.log(examMarks[0]); //printing 1st array
+// access specific element of array of object or element of 2D element
+console.log(examMarks[0][0]) //printing 1st element
+console.log(examMarks[2][2]) //printing array of objects 3 array 3rd element
+// also can change array of object element
+examMarks[0][0]=100;
+console.log(examMarks)
+// also can change array in array of object
+examMarks[3][0]=333;
+examMarks[3][1]=444;
+examMarks[3][2]=555;
+examMarks[3][3]=666;
+examMarks[3][4]=777;
+console.log(examMarks)
+// also can add element to specific array
+examMarks[2][5]=787;
+examMarks[2][6]=78789;
+console.log(examMarks[2])
+//also can array to array of object
+examMarks[4]=[121, 342, 653, 278, 909]
+console.log(examMarks)
+
+//pop an element
+examMarks[4].pop(); // pop the index 4 last element
+console.log(examMarks)
+
+//also push an element
+examMarks[4].push(1000123678);
+console.log(examMarks)
