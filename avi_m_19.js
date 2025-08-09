@@ -43,3 +43,16 @@ console.log('\n\n')
     console.log(sq);
   }
   sqare(5);
+
+
+  //19-3 Function parameter, handle multiple parameters
+  function areaTriangle(height ,width){
+    console.log(height, width);
+    const area=.5*height*width;
+    console.log('area of ',height,' and ',width,'is : ', area);
+  }
+  areaTriangle(5,6);
+// we can also pass argument or  variable
+const height=10;
+const width=20;
+areaTriangle(height,width);
