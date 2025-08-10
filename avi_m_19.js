@@ -155,3 +155,16 @@ console.log('.................\n\n');
  let person ={age:25};
   let h=objectArgument(person);
   console.log(h);
+
+  //19-8 Sum of all numbers in an array using function
+  function arrSum(num){
+    let sum=0;
+    for(const n of num){
+        sum=sum+n;
+    }
+    return sum;
+  }
+  //const arr=[2, 4, 6, 8, 10];
+  console.log(arrSum([5,8,90,23,12,54]))
+
+  //19-9 Return all the even numbers of an array
