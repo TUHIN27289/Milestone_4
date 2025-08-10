@@ -167,4 +167,17 @@ console.log('.................\n\n');
   //const arr=[2, 4, 6, 8, 10];
   console.log(arrSum([5,8,90,23,12,54]))
 
+  console.log('.................\n\n');
   //19-9 Return all the even numbers of an array
+  const evens=[];
+function arrEven(arr){
+    let sum=0;
+    for(const e of arr){
+        if(e%2===0){
+            evens.push(e);
+            sum=sum+e;
+        }  
+    }
+    return {evens,sum};
+}
+console.log(arrEven([4,78,45,12,43,89,90,121]))
