@@ -75,3 +75,83 @@ function halfSalary(sal){
 }
 const salary=halfSalary(10000000); //set return value to a variable
 console.log(salary);
+
+// conditional example
+function isEven(num){
+    if(num%2===0){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+console.log(isEven(10));
+console.log(isEven(13));
+
+function isOdd(num){
+    if(num%2===1){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+console.log(isOdd(7));
+console.log(isOdd(10));
+
+// 19-7 Different types of parameters for a function
+function mFunction(par){
+    //const si=par.length;
+    console.log(par,par.length);
+    if(par.length%2===0){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+const a= mFunction('tuhin');
+console.log(a);
+const a1= mFunction('asma');
+console.log(a1);
+
+console.log('.................\n\n')
+//function double or triple
+ function doubleorTriple(num, doDouble){
+    if(doDouble===true){
+        const dnum=num*2;
+        return dnum;
+    }
+    else{
+        const tnum=num*3;
+        return tnum;
+    }
+ }
+ console.log(doubleorTriple(6,true));
+ console.log(doubleorTriple(6,false));
+
+ console.log('.................\n\n');
+
+ /// can also receive an array through an argument
+ function resArray(arr){
+    const len=arr.length;
+    return len;
+ }
+let aviY=resArray([4,7,34,90,12,101])
+console.log(aviY)
+
+
+console.log('.................\n\n');
+
+ /// can also receive an object through an argument
+
+ function objectArgument(you){
+    const age=you.age;
+    return age;
+
+
+ }
+ let person ={age:25};
+  let h=objectArgument(person);
+  console.log(h);
