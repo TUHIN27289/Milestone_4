@@ -51,3 +51,28 @@ function oddarrayAvg(arr) {
 }
 console.log(oddarrayAvg([7, 9, 3, 5, 2, 8, 9, 3, 56]));
 console.log(oddarrayAvg([2, 4, 6]));  
+
+
+// 20-4 Calculate the average of the even numbers in an array
+
+function evenarrayAvg(arr) {
+  let s = 0,
+    p = 0;
+  let av;
+  for (const a of arr) {
+    if (a % 2 === 0) {
+      s = s + a;
+      p++;
+    }
+  }
+  if(p===0){
+    return 0;
+  }
+  else{
+    return s/p;
+  }
+//   av = s / p;
+//   return av;
+}
+console.log(evenarrayAvg([7, 9, 3, 5, 2, 8, 9, 3, 56]));
+console.log(evenarrayAvg([2, 4, 6]));  
