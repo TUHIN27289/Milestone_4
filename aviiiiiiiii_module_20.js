@@ -76,3 +76,16 @@ function evenarrayAvg(arr) {
 }
 console.log(evenarrayAvg([7, 9, 3, 5, 2, 8, 9, 3, 56]));
 console.log(evenarrayAvg([2, 4, 6]));  
+
+//20-5 Remove duplicate items from an array
+function removeDuplicate(arr){
+    const unique=[];
+    for(const e of arr){
+        if(unique.includes(e)===false){
+            unique.push(e);
+        }
+    }
+    return unique;
+}
+console.log(removeDuplicate(['avi','toukir','1229','avitt','avi','at','toukir']));
+console.log(removeDuplicate([3,6,90,23,45,12,5,5,3,5,3,2,2,4,2,3,4]));
