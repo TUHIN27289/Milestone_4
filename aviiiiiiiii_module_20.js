@@ -89,3 +89,17 @@ function removeDuplicate(arr){
 }
 console.log(removeDuplicate(['avi','toukir','1229','avitt','avi','at','toukir']));
 console.log(removeDuplicate([3,6,90,23,45,12,5,5,3,5,3,2,2,4,2,3,4]));
+
+
+//20-6 Math, abs, round, ceil, floor, and random number
+const a=[7,9,3,90,91,78,34,87,45,90,23,12,10,100,89,1229,-1229];
+console.log(Math.max(...a)); // ... used to copy the root array
+console.log(Math.min(...a));
+console.log(Math.PI);
+console.log(Math.abs(a[1]-a[0])) // gives always absolute value means no sign
+console.log(Math.round(4.24));
+console.log(Math.floor(4.78));
+console.log(Math.ceil(4.23));
+console.log(Math.random());//generally gives a number between 0-1
+console.log(Math.random()*10);// it will be 1-10 but fraction
+console.log(Math.round(Math.random()*10)) // integer
