@@ -75,3 +75,34 @@ function shoping(shirtQuantity, pantQuantity, shoeQuantity){
     return totalPrice;
 }
 console.log(shoping(7,90,3));
+
+//21-4 Find the cheapest phone from an array of phone objects
+const phones=[
+    {name:'iphone', salary: 100000, ram:'8gb', color:'black', camera:'12mp'},
+     {name:'xiaomi', salary: 25000, ram:'8gb', color:'black', camera:'12mp'},
+      {name:'samsung', salary: 6000, ram:'8gb', color:'black', camera:'12mp'},
+       {name:'HTC', salary: 100000, ram:'8gb', color:'black', camera:'12mp'},
+        {name:'OPPO', salary: 50000, ram:'8gb', color:'black', camera:'12mp'},
+         {name:'Walton', salary: 40000, ram:'8gb', color:'black', camera:'12mp'}
+]
+function findCheapestphone(phone){
+    let mob=phone[0];
+    for(const i of phone){
+        if(i.salary<mob.salary){
+            mob=i;
+        }
+    }
+    return mob;
+}
+console.log('cheapest phone ',findCheapestphone(phones))
+
+function findhighphone(phone){
+    let mob=phone[0];
+    for(const i of phone){
+        if(i.salary>mob.salary){
+            mob=i;
+        }
+    }
+    return mob;
+}
+console.log('cheapest phone ',findhighphone(phones))
