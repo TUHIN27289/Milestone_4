@@ -91,6 +91,7 @@ console.log(removeDuplicate(['avi','toukir','1229','avitt','avi','at','toukir'])
 console.log(removeDuplicate([3,6,90,23,45,12,5,5,3,5,3,2,2,4,2,3,4]));
 
 
+
 //20-6 Math, abs, round, ceil, floor, and random number
 const a=[7,9,3,90,91,78,34,87,45,90,23,12,10,100,89,1229,-1229];
 console.log(Math.max(...a)); // ... used to copy the root array
@@ -103,3 +104,37 @@ console.log(Math.ceil(4.23));
 console.log(Math.random());//generally gives a number between 0-1
 console.log(Math.random()*10);// it will be 1-10 but fraction
 console.log(Math.round(Math.random()*10)) // integer
+
+
+//20-7 A Simple introduction to JS Date and time
+const d=new Date(2004-8-31);
+console.log(d);
+console.log(d.toLocaleString());
+console.log(d.toLocaleString('en-GB'));
+console.log(d.getDay());
+console.log(d.getDate());
+console.log(d.getMonth());
+console.log(d.getFullYear());
+console.log(d.getHours());
+console.log(d.getMinutes());
+console.log(d.getTime());
+const d1 = new Date("Mar 25 2015");
+console.log(d1);
+const msec = Date.parse("March 21, 2012");
+console.log(msec);
+
+// 20-8 Swap variable, swap without temp, destructing
+ 
+//way-1
+let b=8,c=4;
+console.log(b,'  ',c);
+const temp=b;
+b=c;
+c=temp;
+console.log(b,'  ',c);
+
+//way-2
+let x=5,y=9;
+console.log(x,'  ',y);
+[x,y]=[y,x];
+console.log(x,'  ',y);
