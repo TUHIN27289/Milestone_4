@@ -40,7 +40,6 @@ function findTallest(arr) {
 }
 console.log(findTallest([9, 8, 90, 5, 67, 54]));
 
-
 function findSmallest(arr) {
   let min = arr[0];
   for (let i of arr) {
@@ -51,3 +50,28 @@ function findSmallest(arr) {
   return min;
 }
 console.log(findSmallest([9, 8, 90, 5, 67, 54]));
+
+//21-3 Use add and multiplication to calculate wood requirements
+function woodQuantity(chairQuantity, tableQuantity, bedQuantity) {
+  const perChairWood = 3;
+  const perTableWood = 10;
+  const perBedWood = 50;
+
+  const chairTotalWood = perChairWood * chairQuantity;
+  const tableTotalWood = perTableWood * tableQuantity;
+  const bedTotalWood = perBedWood * bedQuantity;
+  return chairTotalWood+tableTotalWood+bedTotalWood;
+}
+console.log(woodQuantity(4,8,9));
+
+function shoping(shirtQuantity, pantQuantity, shoeQuantity){
+    const perShirtPrice=500;
+    const perPantPrice=300;
+    const perShoePrice=900;
+    const totalShirtPrice=perShirtPrice*shirtQuantity;
+    const totalPantPrice=perPantPrice*pantQuantity;
+    const totalShoePrice=perShoePrice*shoeQuantity;
+    const totalPrice=totalShirtPrice+totalPantPrice+totalShoePrice;
+    return totalPrice;
+}
+console.log(shoping(7,90,3));
