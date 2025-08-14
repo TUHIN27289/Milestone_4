@@ -60,88 +60,141 @@ function woodQuantity(chairQuantity, tableQuantity, bedQuantity) {
   const chairTotalWood = perChairWood * chairQuantity;
   const tableTotalWood = perTableWood * tableQuantity;
   const bedTotalWood = perBedWood * bedQuantity;
-  return chairTotalWood+tableTotalWood+bedTotalWood;
+  return chairTotalWood + tableTotalWood + bedTotalWood;
 }
-console.log(woodQuantity(4,8,9));
+console.log(woodQuantity(4, 8, 9));
 
-function shoping(shirtQuantity, pantQuantity, shoeQuantity){
-    const perShirtPrice=500;
-    const perPantPrice=300;
-    const perShoePrice=900;
-    const totalShirtPrice=perShirtPrice*shirtQuantity;
-    const totalPantPrice=perPantPrice*pantQuantity;
-    const totalShoePrice=perShoePrice*shoeQuantity;
-    const totalPrice=totalShirtPrice+totalPantPrice+totalShoePrice;
-    return totalPrice;
+function shoping(shirtQuantity, pantQuantity, shoeQuantity) {
+  const perShirtPrice = 500;
+  const perPantPrice = 300;
+  const perShoePrice = 900;
+  const totalShirtPrice = perShirtPrice * shirtQuantity;
+  const totalPantPrice = perPantPrice * pantQuantity;
+  const totalShoePrice = perShoePrice * shoeQuantity;
+  const totalPrice = totalShirtPrice + totalPantPrice + totalShoePrice;
+  return totalPrice;
 }
-console.log(shoping(7,90,3));
+console.log(shoping(7, 90, 3));
 
 //21-4 Find the cheapest phone from an array of phone objects
-const phones=[
-    {name:'iphone', salary: 100000, ram:'8gb', color:'black', camera:'12mp'},
-     {name:'xiaomi', salary: 25000, ram:'8gb', color:'black', camera:'12mp'},
-      {name:'samsung', salary: 6000, ram:'8gb', color:'black', camera:'12mp'},
-       {name:'HTC', salary: 100000, ram:'8gb', color:'black', camera:'12mp'},
-        {name:'OPPO', salary: 50000, ram:'8gb', color:'black', camera:'12mp'},
-         {name:'Walton', salary: 40000, ram:'8gb', color:'black', camera:'12mp'}
-]
-function findCheapestphone(phone){
-    let mob=phone[0];
-    for(const i of phone){
-        if(i.salary<mob.salary){
-            mob=i;
-        }
+const phones = [
+  {
+    name: "iphone",
+    salary: 100000,
+    ram: "8gb",
+    color: "black",
+    camera: "12mp",
+  },
+  { name: "xiaomi", salary: 25000, ram: "8gb", color: "black", camera: "12mp" },
+  { name: "samsung", salary: 6000, ram: "8gb", color: "black", camera: "12mp" },
+  { name: "HTC", salary: 100000, ram: "8gb", color: "black", camera: "12mp" },
+  { name: "OPPO", salary: 50000, ram: "8gb", color: "black", camera: "12mp" },
+  { name: "Walton", salary: 40000, ram: "8gb", color: "black", camera: "12mp" },
+];
+function findCheapestphone(phone) {
+  let mob = phone[0];
+  for (const i of phone) {
+    if (i.salary < mob.salary) {
+      mob = i;
     }
-    return mob;
+  }
+  return mob;
 }
-console.log('cheapest phone ',findCheapestphone(phones))
+console.log("cheapest phone ", findCheapestphone(phones));
 
-function findhighphone(phone){
-    let mob=phone[0];
-    for(const i of phone){
-        if(i.salary>mob.salary){
-            mob=i;
-        }
+function findhighphone(phone) {
+  let mob = phone[0];
+  for (const i of phone) {
+    if (i.salary > mob.salary) {
+      mob = i;
     }
-    return mob;
+  }
+  return mob;
 }
-console.log('high price phone ',findhighphone(phones))
+console.log("high price phone ", findhighphone(phones));
 
 //21-5 Calculate the total cost of the products in a shopping cart
- 
-const products=[
-    {name:'shirt' , price:700, quantity:5},
-    {name:'pant', price:1200, quantity:7},
-    {name:'shoe', price:2000, quantity:2},
-    {name:'punjabi',price:3000, quantity:6}
-]
 
+const products = [
+  { name: "shirt", price: 700, quantity: 5 },
+  { name: "pant", price: 1200, quantity: 7 },
+  { name: "shoe", price: 2000, quantity: 2 },
+  { name: "punjabi", price: 3000, quantity: 6 },
+];
 
-function productsCart(products){
-    let total=0;
-    for(const p of products){
-        total=total+(p.price*p.quantity);
-    }
-    return total;
+function productsCart(products) {
+  let total = 0;
+  for (const p of products) {
+    total = total + p.price * p.quantity;
+  }
+  return total;
 }
-const pr=productsCart(products);
-console.log('Total price : ',pr);
+const pr = productsCart(products);
+console.log("Total price : ", pr);
 
+const products_ = [
+  { name: "shirt", price: 700 },
+  { name: "pant", price: 1200 },
+  { name: "shoe", price: 2000 },
+  { name: "punjabi", price: 3000 },
+];
 
-const products_=[
-    {name:'shirt' , price:700 },
-    {name:'pant', price:1200},
-    {name:'shoe', price:2000},
-    {name:'punjabi',price:3000}
-]
+const quanties = [4, 7, 11, 5];
 
-const quanties=[4,7,11,5];
-
-function productsCart_(products,quanties){
-    let total=0;
-    for(const [p,pro] of products.entries()){
-        total=total+(pro.price*quanties[p]);
-    }
-    return total;
+function productsCart_(products, quanties) {
+  let total = 0;
+  for (const [p, pro] of products.entries()) {
+    total = total + pro.price * quanties[p];
+  }
+  return total;
 }
-console.log('Total Price : ',productsCart_(products_,quanties));
+console.log("Total Price : ", productsCart_(products_, quanties));
+
+// discount price calculation
+// 100 -->100
+// 101-- 200 -->90
+// >200 --->70
+
+function discount(avi) {
+  const price = 500;
+  if (0 < avi <= 100) {
+    const to = price * avi;
+    return to;
+  } else if (100 < avi <= 200) {
+    const to = price * avi * 0.9;
+    return to;
+  } else if (avi > 200) {
+    const to = price * avi * 0.7;
+    return to;
+  }
+}
+console.log("discount amount : ", discount(100));
+console.log("discount amount : ", discount(190));
+console.log("discount amount : ", discount(300));
+
+//21-6 (advanced) Multi-layer discount price calculation
+// first 100 price 100
+// second 200 price 90
+// greater than 200 price 70
+
+function layerDiscount(quantity) {
+  const first100Price = 100;
+  const second200Price = 90;
+  const above200Price = 70;
+  if (quantity >= 100) {
+    const result = first100Price * quantity;
+    return result;
+  } else if (quantity <= 200) {
+    const combine100price = 100 * 100;
+    const remquantityprice = (quantity - 100) * second200Price;
+    return combine100price + remquantityprice;
+  } else {
+    const combine100price = 100 * first100Price;
+    const combine200price = 100 * second200Price;
+    const rem = (quantity - 200) * above200Price;
+    return combine100price + combine200price + rem;
+  }
+}
+console.log("Layer discount price", layerDiscount(90));
+console.log("Layer discount price", layerDiscount(170));
+console.log("Layer discount price", layerDiscount(290));
