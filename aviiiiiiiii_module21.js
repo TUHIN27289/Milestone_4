@@ -198,3 +198,40 @@ function layerDiscount(quantity) {
 console.log("Layer discount price", layerDiscount(90));
 console.log("Layer discount price", layerDiscount(170));
 console.log("Layer discount price", layerDiscount(290));
+
+//21-7 Simple calculator to call function inside a function
+function add(a,b){
+    return a+b;
+}
+function subtract(a,b){
+    return a-b;
+}
+function multiple(a,b){
+    return a*b;
+}
+function divide(a,b){
+    return a/b;
+}
+function reminder(a,b){
+    return a%b;
+}
+function calculator(a,b,operation){
+    if(operation==='add'){
+        return add(a,b);
+    }
+    else if(operation==='subtract'){
+        return subtract(a,b);
+    }
+    else if(operation==='multiple'){
+        return multiple(a,b);
+    }
+    else if(operation==='divide'){
+        return divide(a,b);
+    }
+    else if(operation==='reminder'){
+        return reminder(a,b);
+    }
+}
+
+const res=calculator(5,7,'reminder');
+console.log(res)
