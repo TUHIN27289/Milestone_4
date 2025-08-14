@@ -105,4 +105,43 @@ function findhighphone(phone){
     }
     return mob;
 }
-console.log('cheapest phone ',findhighphone(phones))
+console.log('high price phone ',findhighphone(phones))
+
+//21-5 Calculate the total cost of the products in a shopping cart
+ 
+const products=[
+    {name:'shirt' , price:700, quantity:5},
+    {name:'pant', price:1200, quantity:7},
+    {name:'shoe', price:2000, quantity:2},
+    {name:'punjabi',price:3000, quantity:6}
+]
+
+
+function productsCart(products){
+    let total=0;
+    for(const p of products){
+        total=total+(p.price*p.quantity);
+    }
+    return total;
+}
+const pr=productsCart(products);
+console.log('Total price : ',pr);
+
+
+const products_=[
+    {name:'shirt' , price:700 },
+    {name:'pant', price:1200},
+    {name:'shoe', price:2000},
+    {name:'punjabi',price:3000}
+]
+
+const quanties=[4,7,11,5];
+
+function productsCart_(products,quanties){
+    let total=0;
+    for(const [p,pro] of products.entries()){
+        total=total+(pro.price*quanties[p]);
+    }
+    return total;
+}
+console.log('Total Price : ',productsCart_(products_,quanties));
