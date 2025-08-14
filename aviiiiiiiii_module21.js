@@ -235,3 +235,13 @@ function calculator(a,b,operation){
 
 const res=calculator(5,7,'reminder');
 console.log(res)
+
+//21-8 Handle unexpected function input parameter error
+function addition(a,b){
+    if( typeof a!=='number'|| typeof b!=='number'){
+        return 'please provide a number';
+    }
+    return a+b;
+}
+console.log(addition(7,'9'));
+console.log(addition(7,9));
